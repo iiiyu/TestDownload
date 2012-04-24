@@ -10,6 +10,8 @@
 #import "ASINetworkQueue.h"
 #import "ASIHTTPRequest.h"
 #import "TDNetworkQueue.h"
+#import "ZipArchive.h"
+
 
 static NSString *test1URL = @"http://kevincao.com/download/auto-apps-review.zip";
 static NSString *test2URL = @"http://pixelresort.com/downloads/safariset_mac.zip";
@@ -114,6 +116,32 @@ static NSString *test2URL = @"http://pixelresort.com/downloads/safariset_mac.zip
             break;
     }
  
+}
+
+
+
+- (IBAction)buttonUnzipAction:(id)sender {
+//    NSString *downloadPath = [NSHomeDirectory() stringByAppendingPathComponent:@"Documents/1.zip"];
+    NSString *dowloadPath = [NSHomeDirectory() stringByAppendingPathComponent:@"Documents/1.zip"];
+    NSString *unzipPath = [NSHomeDirectory() stringByAppendingPathComponent:@"Documents/1"];
+    ZipArchive *unzip = [[ZipArchive alloc] init];
+    if ([unzip UnzipOpenFile:dowloadPath]) {
+        BOOL result = [unzip UnzipFileTo:unzipPath overWrite:YES];
+        if (result) {
+            NSLog(@"解压成功！");
+        } else {
+            NSLog(@"解压失败1");
+
+        }
+        [unzip UnzipCloseFile];
+    }
+    else {
+        NSLog(@"解压失败2");
+    }
+
+
+
+    
 }
 
 

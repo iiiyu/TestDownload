@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C9ECCEE61546AC98008BBC81 /* ioapi.c in Sources */ = {isa = PBXBuildFile; fileRef = C9ECCEDC1546AC98008BBC81 /* ioapi.c */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		C9ECCEE71546AC98008BBC81 /* mztools.c in Sources */ = {isa = PBXBuildFile; fileRef = C9ECCEDE1546AC98008BBC81 /* mztools.c */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		C9ECCEE81546AC98008BBC81 /* unzip.c in Sources */ = {isa = PBXBuildFile; fileRef = C9ECCEE01546AC98008BBC81 /* unzip.c */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		C9ECCEE91546AC98008BBC81 /* zip.c in Sources */ = {isa = PBXBuildFile; fileRef = C9ECCEE21546AC98008BBC81 /* zip.c */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		C9ECCEEA1546AC98008BBC81 /* ZipArchive.mm in Sources */ = {isa = PBXBuildFile; fileRef = C9ECCEE51546AC98008BBC81 /* ZipArchive.mm */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		C9FEB2E21545B7E7004EC264 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9FEB2E11545B7E7004EC264 /* UIKit.framework */; };
 		C9FEB2E41545B7E7004EC264 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9FEB2E31545B7E7004EC264 /* Foundation.framework */; };
 		C9FEB2E61545B7E7004EC264 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9FEB2E51545B7E7004EC264 /* CoreGraphics.framework */; };
@@ -28,10 +33,21 @@
 		C9FEB3821545B8C7004EC264 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = C9FEB3811545B8C7004EC264 /* libz.dylib */; };
 		C9FEB3841545B8CD004EC264 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9FEB3831545B8CD004EC264 /* CFNetwork.framework */; };
 		C9FEB38A1545B962004EC264 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9FEB3891545B962004EC264 /* MobileCoreServices.framework */; };
-		C9FEB38E15464143004EC264 /* TDNetworkQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = C9FEB38D15464143004EC264 /* TDNetworkQueue.m */; };
+		C9FEB38E15464143004EC264 /* TDNetworkQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = C9FEB38D15464143004EC264 /* TDNetworkQueue.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C9ECCEDB1546AC98008BBC81 /* crypt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = crypt.h; sourceTree = "<group>"; };
+		C9ECCEDC1546AC98008BBC81 /* ioapi.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ioapi.c; sourceTree = "<group>"; };
+		C9ECCEDD1546AC98008BBC81 /* ioapi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ioapi.h; sourceTree = "<group>"; };
+		C9ECCEDE1546AC98008BBC81 /* mztools.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = mztools.c; sourceTree = "<group>"; };
+		C9ECCEDF1546AC98008BBC81 /* mztools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mztools.h; sourceTree = "<group>"; };
+		C9ECCEE01546AC98008BBC81 /* unzip.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = unzip.c; sourceTree = "<group>"; };
+		C9ECCEE11546AC98008BBC81 /* unzip.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = unzip.h; sourceTree = "<group>"; };
+		C9ECCEE21546AC98008BBC81 /* zip.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = zip.c; sourceTree = "<group>"; };
+		C9ECCEE31546AC98008BBC81 /* zip.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = zip.h; sourceTree = "<group>"; };
+		C9ECCEE41546AC98008BBC81 /* ZipArchive.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZipArchive.h; sourceTree = "<group>"; };
+		C9ECCEE51546AC98008BBC81 /* ZipArchive.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = ZipArchive.mm; sourceTree = "<group>"; };
 		C9FEB2DD1545B7E7004EC264 /* TestDownload.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestDownload.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9FEB2E11545B7E7004EC264 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		C9FEB2E31545B7E7004EC264 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -93,6 +109,32 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C9ECCED91546AC98008BBC81 /* ZipArchive */ = {
+			isa = PBXGroup;
+			children = (
+				C9ECCEDA1546AC98008BBC81 /* minizip */,
+				C9ECCEE41546AC98008BBC81 /* ZipArchive.h */,
+				C9ECCEE51546AC98008BBC81 /* ZipArchive.mm */,
+			);
+			path = ZipArchive;
+			sourceTree = "<group>";
+		};
+		C9ECCEDA1546AC98008BBC81 /* minizip */ = {
+			isa = PBXGroup;
+			children = (
+				C9ECCEDB1546AC98008BBC81 /* crypt.h */,
+				C9ECCEDC1546AC98008BBC81 /* ioapi.c */,
+				C9ECCEDD1546AC98008BBC81 /* ioapi.h */,
+				C9ECCEDE1546AC98008BBC81 /* mztools.c */,
+				C9ECCEDF1546AC98008BBC81 /* mztools.h */,
+				C9ECCEE01546AC98008BBC81 /* unzip.c */,
+				C9ECCEE11546AC98008BBC81 /* unzip.h */,
+				C9ECCEE21546AC98008BBC81 /* zip.c */,
+				C9ECCEE31546AC98008BBC81 /* zip.h */,
+			);
+			path = minizip;
+			sourceTree = "<group>";
+		};
 		C9FEB2D21545B7E7004EC264 = {
 			isa = PBXGroup;
 			children = (
@@ -127,6 +169,7 @@
 		C9FEB2E71545B7E7004EC264 /* TestDownload */ = {
 			isa = PBXGroup;
 			children = (
+				C9ECCED91546AC98008BBC81 /* ZipArchive */,
 				C9FEB2FE1545B87E004EC264 /* ASIHTTPRequest */,
 				C9FEB2F01545B7E7004EC264 /* TDAppDelegate.h */,
 				C9FEB2F11545B7E7004EC264 /* TDAppDelegate.m */,
@@ -280,6 +323,11 @@
 				C9FEB35F1545B87E004EC264 /* ASINetworkQueue.m in Sources */,
 				C9FEB37E1545B87E004EC264 /* Reachability.m in Sources */,
 				C9FEB38E15464143004EC264 /* TDNetworkQueue.m in Sources */,
+				C9ECCEE61546AC98008BBC81 /* ioapi.c in Sources */,
+				C9ECCEE71546AC98008BBC81 /* mztools.c in Sources */,
+				C9ECCEE81546AC98008BBC81 /* unzip.c in Sources */,
+				C9ECCEE91546AC98008BBC81 /* zip.c in Sources */,
+				C9ECCEEA1546AC98008BBC81 /* ZipArchive.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
