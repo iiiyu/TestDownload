@@ -65,6 +65,52 @@
     }
 }
 
+- (void)clearAllRequestsDelegate
+{
+    for (ASIHTTPRequest *request in self.requestArray) {
+        [request setDownloadProgressDelegate:nil];
+    }
+    
+}
+
+
+- (void)clearOneRequestDelegateWithURL:(NSString *)paramURL
+{
+    for (ASIHTTPRequest *request in self.requestArray) {
+        if ([[request.url absoluteString] isEqualToString:paramURL]) {
+            [request setDownloadProgressDelegate:nil];
+        }
+    }
+    
+}
+
+- (void)requestsDelegateSettingWithDictonary:(NSDictionary *) paramDictonary
+{
+    for (ASIHTTPRequest *request in self.requestArray) {
+        for (id key in paramDictonary)
+        {
+            if ([[request.url absoluteString] isEqualToString:(NSString *)key]) {
+                [request setDownloadProgressDelegate:[paramDictonary objectForKey:key]];
+            }
+        }
+    }
+}
+
+- (void)pauseDownload:(NSString *)paramPauseURL
+{
+    for (ASIHTTPRequest *request in self.requestArray) {
+        if ([[request.url absoluteString] isEqualToString:paramPauseURL]) {
+            // 取消请求
+            [request clearDelegatesAndCancel];
+            [self.requestArray removeObject:request];
+        }
+    }
+    
+}
+
+
+
+#pragma mark ASIHTTPRequestDelegate
 
 - (void)request:(ASIHTTPRequest *)request didReceiveResponseHeaders:(NSDictionary *)responseHeaders
 {
@@ -113,50 +159,6 @@
 }
 
 
-
-
-- (void)clearAllRequestsDelegate
-{
-    for (ASIHTTPRequest *request in self.requestArray) {
-        [request setDownloadProgressDelegate:nil];
-    }
-    
-}
-
-
-- (void)clearOneRequestDelegateWithURL:(NSString *)paramURL
-{
-    for (ASIHTTPRequest *request in self.requestArray) {
-        if ([[request.url absoluteString] isEqualToString:paramURL]) {
-            [request setDownloadProgressDelegate:nil];
-        }
-    }
-    
-}
-
-- (void)requestsDelegateSettingWithDictonary:(NSDictionary *) paramDictonary
-{
-    for (ASIHTTPRequest *request in self.requestArray) {
-        for (id key in paramDictonary)
-        {
-            if ([[request.url absoluteString] isEqualToString:(NSString *)key]) {
-                [request setDownloadProgressDelegate:[paramDictonary objectForKey:key]];
-            }
-        }
-    }
-}
-
-- (void)pauseDownload:(NSString *)paramPauseURL
-{
-    for (ASIHTTPRequest *request in self.requestArray) {
-        if ([[request.url absoluteString] isEqualToString:paramPauseURL]) {
-            // 取消请求
-            [request clearDelegatesAndCancel];
-            [self.requestArray removeObject:request];
-        }
-    }
-
-}
 
 
 @end

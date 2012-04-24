@@ -85,6 +85,10 @@ static NSString *test2URL = @"http://pixelresort.com/downloads/safariset_mac.zip
     NSString *downloadPath = [NSHomeDirectory() stringByAppendingPathComponent:@"Documents/1.zip"];
     NSString *tempPath = [path stringByAppendingPathComponent:@"1.temp"];
     NSURL *url = [NSURL URLWithString:test1URL];
+//    for (int i = 0; i < 10; i++)
+//    {
+//        [tdNetworkQueue addDownloadRequestInQueue:url withTempPath:tempPath withDownloadPath:downloadPath withProgressView:nil];
+//    }
     [tdNetworkQueue addDownloadRequestInQueue:url withTempPath:tempPath withDownloadPath:downloadPath withProgressView:self.progressView1];
      NSLog(@"URl:%@", [url absoluteURL]);
 
@@ -122,7 +126,7 @@ static NSString *test2URL = @"http://pixelresort.com/downloads/safariset_mac.zip
 
 - (IBAction)buttonUnzipAction:(id)sender {
 //    NSString *downloadPath = [NSHomeDirectory() stringByAppendingPathComponent:@"Documents/1.zip"];
-    NSString *dowloadPath = [NSHomeDirectory() stringByAppendingPathComponent:@"Documents/1.zip"];
+    NSString *dowloadPath = [NSHomeDirectory() stringByAppendingPathComponent:@"Documents/2.zip"];
     NSString *unzipPath = [NSHomeDirectory() stringByAppendingPathComponent:@"Documents/1"];
     ZipArchive *unzip = [[ZipArchive alloc] init];
     if ([unzip UnzipOpenFile:dowloadPath]) {
@@ -138,8 +142,6 @@ static NSString *test2URL = @"http://pixelresort.com/downloads/safariset_mac.zip
     else {
         NSLog(@"解压失败2");
     }
-
-
 
     
 }
