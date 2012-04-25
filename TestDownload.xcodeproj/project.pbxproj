@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C96FA44C1547A91D006D6387 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = C96FA44B1547A91D006D6387 /* MBProgressHUD.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		C9ECCEE61546AC98008BBC81 /* ioapi.c in Sources */ = {isa = PBXBuildFile; fileRef = C9ECCEDC1546AC98008BBC81 /* ioapi.c */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		C9ECCEE71546AC98008BBC81 /* mztools.c in Sources */ = {isa = PBXBuildFile; fileRef = C9ECCEDE1546AC98008BBC81 /* mztools.c */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		C9ECCEE81546AC98008BBC81 /* unzip.c in Sources */ = {isa = PBXBuildFile; fileRef = C9ECCEE01546AC98008BBC81 /* unzip.c */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
@@ -37,6 +38,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C96FA44A1547A91D006D6387 /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
+		C96FA44B1547A91D006D6387 /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
 		C9ECCEDB1546AC98008BBC81 /* crypt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = crypt.h; sourceTree = "<group>"; };
 		C9ECCEDC1546AC98008BBC81 /* ioapi.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ioapi.c; sourceTree = "<group>"; };
 		C9ECCEDD1546AC98008BBC81 /* ioapi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ioapi.h; sourceTree = "<group>"; };
@@ -109,6 +112,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C96FA4491547A91D006D6387 /* MBProgressHUD */ = {
+			isa = PBXGroup;
+			children = (
+				C96FA44A1547A91D006D6387 /* MBProgressHUD.h */,
+				C96FA44B1547A91D006D6387 /* MBProgressHUD.m */,
+			);
+			path = MBProgressHUD;
+			sourceTree = "<group>";
+		};
 		C9ECCED91546AC98008BBC81 /* ZipArchive */ = {
 			isa = PBXGroup;
 			children = (
@@ -169,6 +181,7 @@
 		C9FEB2E71545B7E7004EC264 /* TestDownload */ = {
 			isa = PBXGroup;
 			children = (
+				C96FA4491547A91D006D6387 /* MBProgressHUD */,
 				C9ECCED91546AC98008BBC81 /* ZipArchive */,
 				C9FEB2FE1545B87E004EC264 /* ASIHTTPRequest */,
 				C9FEB2F01545B7E7004EC264 /* TDAppDelegate.h */,
@@ -328,6 +341,7 @@
 				C9ECCEE81546AC98008BBC81 /* unzip.c in Sources */,
 				C9ECCEE91546AC98008BBC81 /* zip.c in Sources */,
 				C9ECCEEA1546AC98008BBC81 /* ZipArchive.mm in Sources */,
+				C96FA44C1547A91D006D6387 /* MBProgressHUD.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
